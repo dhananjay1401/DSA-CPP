@@ -23,5 +23,16 @@ public:
             startingRow++;
 
 
+             for(int index = startingRow; count<total && index<=endingRow; index++) {
+                ans.push_back(matrix[index][endingCol]);
+                count++;
+            }
+            endingCol--;
+            for(int i= endingCol; count<total && i>=startingCol; i--){
+                ans.push_back(matrix[endingRow][i]);
+            count++;
+
+            }
+            endingRow--;
 
 };
