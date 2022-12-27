@@ -4,11 +4,3 @@
             count++;
 
             }
-            startingCol++;
-
-
-        }
-        return ans;
-
-    }
-};
