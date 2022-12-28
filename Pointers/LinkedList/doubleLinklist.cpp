@@ -14,6 +14,8 @@ public:
     }
 };
 
+void insertAtHead(Node* &head)
+
 void print(Node* &head){
 Node* temp = head;
 while(temp!=NULL){
