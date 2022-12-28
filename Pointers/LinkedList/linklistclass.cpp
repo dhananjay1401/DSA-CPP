@@ -1,4 +1,6 @@
 #include<iostream>
+#include<map>
+
 using namespace std;
 
 class Node{
@@ -11,6 +13,17 @@ Node(int data){
 this -> data = data;
 this -> next = NULL;
 }
+
+  ~Node() {
+        int value = this -> data;
+        //memory free
+        if(this->next != NULL) {
+            delete next;
+            this->next = NULL;
+        }
+        cout << " memory is free for node with data " << value << endl;
+    }
+
 };
 void insertAtHead(Node* &head, int d){
 Node* temp = new Node(d);
@@ -46,6 +59,28 @@ Node* nodetoInsert = new Node(d);
     temp -> next = nodetoInsert;
 }
 
+void deleteNode(Node* &head, int position){
+
+if(position ==1){
+    Node* temp =head;
+    head = head -> next;
+    temp->next = NULL;
+    delete temp;
+}else{
+Node* curr =head;
+Node* prev = NULL;
+int cnt = 1;
+while(cnt<position){
+    prev = curr;
+    curr = curr -> next;
+    cnt++;
+}
+prev->next = curr->next;
+curr->next = NULL;
+delete curr;
+}
+}
+
 int print(Node* &head){
 Node* temp =head;
 while(temp !=NULL){
@@ -68,7 +103,9 @@ insertAtTail(tail,90);
 insertAtTail(tail,100);
 
 insertAtPosition(tail,head,1,60);
-//print(head);
+print(head);
+
+deleteNode(head,1);
 print(head);
 
 return 0;
