@@ -4,12 +4,12 @@ using namespace std;
 class Node{
 public:
     int data;
-    Node* curr;
+    Node* next;
     Node* prev;
 
     Node(int d){
     this -> data = d;
-    this -> curr = NULL;
+    this -> next = NULL;
     this -> prev = NULL;
     }
 };
@@ -17,12 +17,12 @@ public:
 void print(Node* &head){
 Node* temp = head;
 while(temp!=NULL){
-    count<<temp->data<<" ";
+    cout<<temp->data<<" ";
     temp = temp -> next;
 }
 }
 
-void getLength(Node* &head){
+int getLength(Node* &head){
 Node* temp =head;
 int len = 0;
 while(temp!=NULL){
@@ -31,3 +31,13 @@ while(temp!=NULL){
 }
 return len;
 }
+
+int main(){
+
+Node* node1 = new Node(10);
+Node* head = node1;
+print(head);
+getLength(head);
+return 0;
+}
+
