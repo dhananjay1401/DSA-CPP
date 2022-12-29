@@ -46,12 +46,14 @@ if(tail==NULL){
 Node*prev = tail;
 Node*curr = prev -> next;
 
-if(curr->data!=value){
+while(curr->data!=value){
     prev = curr;
     curr = curr -> next;
 }
-
 prev -> next = curr -> next;
+if(tail == curr){
+    tail = prev;
+}
 curr -> next = NULL;
 delete curr;
 }
