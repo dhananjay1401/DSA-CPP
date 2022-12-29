@@ -20,6 +20,21 @@ Node* reverseLinkedList(Node *head)
 
 void recursive(Node* &head, Node * curr, Node * prev){
 
+    if(curr==NULL){
+        head = prev;
+        return;
+    }
+    Node* forward = curr -> next;
+    recursive(head,forward,curr);
+    curr->next = prev;
+}
+
+Node* reverseLinkedList(Node *head)
+{
+        Node* prev = NULL;
+        Node* curr = head;
+        recursive(head,curr,prev);
+    return head;
 
 }
 
