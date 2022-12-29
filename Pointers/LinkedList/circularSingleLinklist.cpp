@@ -54,6 +54,9 @@ prev -> next = curr -> next;
 if(tail == curr){
     tail = prev;
 }
+if(curr = prev){
+    tail = NULL;
+}
 curr -> next = NULL;
 delete curr;
 }
