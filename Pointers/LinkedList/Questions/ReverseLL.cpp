@@ -59,21 +59,6 @@ Node* reverseLinkedList(Node *head)
 
 
 Node* recursive(Node* &head){
-if(head==NULL||head->next == NULL ){
-    return head;
-}
-Node* chotaHead = recursive(head -> next);
-
-head -> next -> next = head;
-head -> next = NULL;
-return chotaHead;
-}
-Node* reverseLinkedList(Node *head)
-{
-
-    return recursive(head);
-
-}
 
 
 
