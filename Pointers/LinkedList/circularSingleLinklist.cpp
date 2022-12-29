@@ -85,6 +85,8 @@ insertNode(tail,13,5);
 print(tail);
 
 del(tail,3);
+del(tail,10);
+
 print(tail);
 
 return 0;
