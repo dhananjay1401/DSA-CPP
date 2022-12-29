@@ -51,11 +51,10 @@ while(curr->data!=value){
     curr = curr -> next;
 }
 prev -> next = curr -> next;
-if(tail == curr){
-    tail = prev;
-}
 if(curr = prev){
     tail = NULL;
+}else if(tail == curr){
+    tail = prev;
 }
 curr -> next = NULL;
 delete curr;
@@ -65,6 +64,11 @@ delete curr;
 
 void print(Node*tail){
     Node* temp = tail;
+
+    if(tail == NULL){
+        cout<<"List Empty"<<endl;
+        return;
+    }
 do{
     cout<<tail->data<<" ";
     tail = tail ->next;
@@ -76,20 +80,19 @@ cout<<endl;
 int main(){
 Node* tail = NULL;
 insertNode(tail,5,3);
-print(tail);
+//print(tail);
 
 insertNode(tail,3,10);
 print(tail);
 
-insertNode(tail,3,13);
-print(tail);
+//insertNode(tail,3,13);
+//print(tail);
 
-insertNode(tail,13,5);
-print(tail);
+//insertNode(tail,13,5);
+//print(tail);
 
 del(tail,3);
-del(tail,10);
-
+//del(tail,10);
 print(tail);
 
 return 0;
