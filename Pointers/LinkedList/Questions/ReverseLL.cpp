@@ -60,6 +60,12 @@ Node* reverseLinkedList(Node *head)
 
 Node* recursive(Node* &head){
 
+if(head==NULL||head->next == NULL ){
+    return head;
+}
+Node* chotaHead = recursive(head -> next);
+
+
 
 
 
