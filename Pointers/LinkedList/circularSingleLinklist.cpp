@@ -37,6 +37,27 @@ curr -> next = temp;
 }
 }
 
+void del(Node* &tail, int value){
+if(tail==NULL){
+    cout<<"List is already empty"<<endl;
+    return;
+}else{
+
+Node*prev = tail;
+Node*curr = prev -> next;
+
+if(curr->data!=value){
+    prev = curr;
+    curr = curr -> next;
+}
+
+prev -> next = curr -> next;
+curr -> next = NULL;
+delete curr;
+}
+
+}
+
 void print(Node*tail){
     Node* temp = tail;
 do{
@@ -60,6 +81,10 @@ print(tail);
 
 insertNode(tail,13,5);
 print(tail);
+
+del(tail,3);
+print(tail);
+
 return 0;
 }
 
