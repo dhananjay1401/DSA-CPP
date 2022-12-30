@@ -18,9 +18,7 @@
 
 Node* kReverse(Node* head, int k) {
 
-if(head==NULL){
-    return head;
-}
+
     Node* forward = NULL;
     Node* curr = head;
     Node* prev = NULL;
