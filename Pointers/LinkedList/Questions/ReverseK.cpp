@@ -16,6 +16,7 @@
 
 *****************************************************************/
 
+Node* kReverse(Node* head, int k) {
 
 if(head==NULL){
     return head;
