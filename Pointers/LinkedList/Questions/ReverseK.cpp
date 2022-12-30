@@ -32,8 +32,6 @@ if(head==NULL){
         count++;
 
     }
-    if(forward!=NULL){
-        head -> next = kReverse(forward,k);
-    }
+
     return prev;
 }
