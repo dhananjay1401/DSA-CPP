@@ -6,3 +6,6 @@ class Solution{
      Node* fast = head;
       Node* slow = head;
 
+      while(fast!=NULL){
+        fast = fast -> next;
+
