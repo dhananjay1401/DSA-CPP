@@ -40,3 +40,15 @@ class Solution{
     Node* head2 = mid->next;
 
     while(head2=NULL){
+        if(head1->data !=head2->data){
+            return 0;
+        }
+        head1 = head1 -> next;
+        head2 = head2 -> next;
+    }
+     Node* temp = mid ->next;
+     mid -> next = reverse(temp);
+
+    }
+    return 0;
+};
