@@ -11,4 +11,9 @@ for(int i=0; i<str.length();i++){
     s.push(ch);
 }
 
+     string ans = "";
+     while(!s.empty()){
 
+
+return 0;
+}
