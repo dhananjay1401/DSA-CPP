@@ -13,7 +13,8 @@ for(int i=0; i<str.length();i++){
 
      string ans = "";
      while(!s.empty()){
-
+         char ch = s.top();
+         ans.push_back(ch);
 
 return 0;
 }
