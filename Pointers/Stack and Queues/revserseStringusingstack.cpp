@@ -17,6 +17,7 @@ for(int i=0; i<str.length();i++){
          ans.push_back(ch);
          s.pop();
      }
+     cout<<ans<<endl;
 
 return 0;
 }
