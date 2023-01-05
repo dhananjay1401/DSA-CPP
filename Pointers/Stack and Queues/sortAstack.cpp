@@ -11,3 +11,6 @@ void sortedInsert(stack<int> &stack, int element){
 }
 
 
+void sortStack(stack<int> &stack)
+{
+       if(stack.empty()){
