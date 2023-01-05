@@ -5,4 +5,5 @@ void sortedInsert(stack<int> &stack, int element){
           return;
        }
     int num = stack.top();
+    stack.pop();
 
