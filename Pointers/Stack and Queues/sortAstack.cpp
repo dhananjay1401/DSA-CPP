@@ -7,4 +7,7 @@ void sortedInsert(stack<int> &stack, int element){
     int num = stack.top();
     stack.pop();
     sortedInsert(stack, element);
+    stack.push(num);
+}
+
 
