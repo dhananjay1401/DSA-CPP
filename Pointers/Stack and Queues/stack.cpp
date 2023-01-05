@@ -57,15 +57,7 @@ int main() {
 Stack st(5);
 st.push(22);
 st.push(43);
-st.push(44);
 
-cout << st.peak() << endl;
-st.pop();
-cout << st.peak() << endl;
-
-
-return 0;
-}
 
 
 
